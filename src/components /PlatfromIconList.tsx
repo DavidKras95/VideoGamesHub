@@ -28,7 +28,8 @@ const PlatfromIconList = ( { platfroms }: Props) => {
 
   return (
     <HStack marginY={'10px'}>
-    {platfroms.map(platfrom => <Icon as={iconMap[platfrom.slug]} color = 'gray.500'/>)} 
+        {platfroms.map(platfrom =>
+            <Icon key={platfrom.id} as={iconMap[platfrom.slug]} color = 'gray.500'/>)} 
     </HStack>
   )
 }
